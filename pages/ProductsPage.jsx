@@ -18,25 +18,15 @@ const ProductsPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Header with Search */}
 
 
-      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {data.products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
-      {/* Pagination */}
-      {data.total > productsPerPage && (
-        <Pagination
-          currentPage={currentPage}
-          totalItems={data.total}
-          itemsPerPage={productsPerPage}
-          onPageChange={setCurrentPage}
-        />
-      )}
+
     </div>
   );
 };

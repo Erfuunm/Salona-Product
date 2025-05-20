@@ -18,7 +18,6 @@ const Pagination = ({ currentPage, totalItems, itemsPerPage, onPageChange }) => 
 
     const pages = [];
     
-    // Always show first page
     if (startPage > 1) {
       pages.push(1);
       if (startPage > 2) {
@@ -26,14 +25,12 @@ const Pagination = ({ currentPage, totalItems, itemsPerPage, onPageChange }) => 
       }
     }
 
-    // Middle pages
     for (let i = startPage; i <= endPage; i++) {
       if (i > 1 && i < totalPages) {
         pages.push(i);
       }
     }
 
-    // Always show last page
     if (endPage < totalPages) {
       if (endPage < totalPages - 1) {
         pages.push('ellipsis-end');
